@@ -20,54 +20,33 @@ class PERFORMANCE_FORM_Settings extends Form
         $this->language = OW::getLanguage();
         
         $cache = new ELEMENT_Checkbox('cache');
-        $cache->setToggle(true);
-        $cache->addAttributes(array(
-            'data-off' => $this->language->text('base', 'no'),
-            'data-on'=> $this->language->text('base', 'yes')
-        ));
+        $cache->setSwitch();
         $cache->setLabel($this->language->text($this->key, 'enable_cache'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($cache);
         
         $cacheType = new ELEMENT_Select('cacheType');
         $cacheType->setOptions(PERFORMANCE_BOL_Service::getInstance()->getBackends());
-        $cacheType->setSelect2();
         $cacheType->setRequired();
         $cacheType->setLabel($this->language->text($this->key, 'cache_type'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($cacheType);
         
         $compressJs = new ELEMENT_Checkbox('compressJs');
-        $compressJs->setToggle(true);
-        $compressJs->addAttributes(array(
-            'data-off' => $this->language->text('base', 'no'),
-            'data-on'=> $this->language->text('base', 'yes')
-        ));
+        $compressJs->setSwitch();
         $compressJs->setLabel($this->language->text($this->key, 'compress_js_files'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($compressJs);
         
         $compressCss = new ELEMENT_Checkbox('compressCss');
-        $compressCss->setToggle(true);
-        $compressCss->addAttributes(array(
-            'data-off' => $this->language->text('base', 'no'),
-            'data-on'=> $this->language->text('base', 'yes')
-        ));
+        $compressCss->setSwitch();
         $compressCss->setLabel($this->language->text($this->key, 'compress_css_files'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($compressCss);
         
         $saveCompressedFiles = new ELEMENT_Checkbox('saveCompressedFiles');
-        $saveCompressedFiles->setToggle(true);
-        $saveCompressedFiles->addAttributes(array(
-            'data-off' => $this->language->text('base', 'no'),
-            'data-on'=> $this->language->text('base', 'yes')
-        ));
+        $saveCompressedFiles->setSwitch();
         $saveCompressedFiles->setLabel($this->language->text($this->key, 'storage_compressed_files'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($saveCompressedFiles);
         
         $gzip = new ELEMENT_Checkbox('gzip');
-        $gzip->setToggle(true);
-        $gzip->addAttributes(array(
-            'data-off' => $this->language->text('base', 'no'),
-            'data-on'=> $this->language->text('base', 'yes')
-        ));
+        $gzip->setSwitch();
         $gzip->setLabel($this->language->text($this->key, 'enable_gzip_compress'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($gzip);
         

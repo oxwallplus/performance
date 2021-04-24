@@ -1,5 +1,5 @@
 {form name='settings'}
-    <div class="form-group row">
+    <div class="mb-3 row">
         {label name='cache'}
         <div class="col-sm-8">
             {input name='cache'}
@@ -7,7 +7,7 @@
             {error name='cache'}
         </div>
     </div>
-    <div class="form-group row">
+    <div class="mb-3 row">
         {label name='cacheType'}
         <div class="col-sm-8">
             {input name='cacheType'}
@@ -15,7 +15,7 @@
             {error name='cacheType'}
         </div>
     </div>
-    <div class="form-group row">
+    <div class="mb-3 row">
         {label name='compressJs'}
         <div class="col-sm-8">
             {input name='compressJs'}
@@ -23,7 +23,7 @@
             {error name='compressJs'}
         </div>
     </div>
-    <div class="form-group row">
+    <div class="mb-3 row">
         {label name='compressCss'}
         <div class="col-sm-8">
             {input name='compressCss'}
@@ -31,7 +31,7 @@
             {error name='compressCss'}
         </div>
     </div>
-    <div class="form-group row">
+    <div class="mb-3 row">
         {label name='saveCompressedFiles'}
         <div class="col-sm-8">
             {input name='saveCompressedFiles'}
@@ -39,7 +39,7 @@
             {error name='saveCompressedFiles'}
         </div>
     </div>
-    <div class="form-group row">
+    <div class="mb-3 row">
         {label name='gzip'}
         <div class="col-sm-8">
             {input name='gzip'}
@@ -47,5 +47,7 @@
             {error name='gzip'}
         </div>
     </div>
-    {submit name='submit' class='btn btn-primary float-right'}
+    <div class="d-grid gap-2">
+        {submit name='submit' class='btn btn-primary float-right'}
+    </div>
 {/form}
